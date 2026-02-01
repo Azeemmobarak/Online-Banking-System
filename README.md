@@ -1,99 +1,146 @@
-Overview
+📌 Overview
 
-The Online Banking System is a secure, multi-tier web application developed as a proof of concept (POC) to simulate real-world banking operations. The system enables customers to manage accounts, perform fund transfers, pay bills, and view transaction history, while providing separate roles for bank staff and administrators to manage and monitor operations securely.
+The Online Banking System is a secure, scalable, multi-tier web application developed as a Proof of Concept (POC). It replicates essential banking functionalities such as account management, fund transfers, bill payments, and transaction tracking.
 
-The application is built using Java EE technologies and follows industry best practices for security, scalability, and maintainability.
+The system is designed with a strong emphasis on security, modularity, and maintainability, leveraging Java EE standards and enterprise design principles. Multiple user roles ensure controlled access and safe execution of banking operations.
 
-🏗️ Architecture
+🏗️ Application Architecture
 
-The system follows a multi-tier architecture:
+The application follows a layered, multi-tier architecture, ensuring clear separation of responsibilities:
 
-Presentation Layer: JSP, JSTL, HTML, CSS
+🔹 Presentation Layer
 
-Controller Layer: Servlets
+JSP & JSTL for dynamic content rendering
 
-Business Logic Layer: EJBs
+HTML & CSS for responsive and user-friendly UI
 
-Persistence Layer: JPA
+🔹 Controller Layer
 
-Database: Oracle RDBMS
+Servlets to handle HTTP requests and responses
 
-👥 User Roles
+Centralized request routing and validation
 
-The application supports role-based access control (RBAC) with three distinct user roles:
+🔹 Business Logic Layer
 
-🔹 Customer
+Enterprise JavaBeans (EJBs) for core business operations
 
-View account details
+Transaction management and business rules enforcement
 
-Transfer funds
+🔹 Persistence Layer
 
-Pay bills
+Java Persistence API (JPA) for ORM
+
+Clean abstraction between database and application logic
+
+🔹 Database Layer
+
+Oracle RDBMS for reliable and consistent data storage
+
+👥 User Roles & Role-Based Access Control (RBAC)
+
+The system enforces RBAC to ensure that each user can only access authorized features.
+
+👤 Customer
+
+Secure authentication and session handling
+
+View account balances and details
+
+Perform fund transfers
+
+Pay bills and utilities
 
 View transaction history
 
-Secure login & session management
+🧑‍💼 Bank Staff
 
-🔹 Bank Staff
+Manage and verify customer accounts
 
-Manage customer accounts
+Monitor transactions and system activity
 
-Monitor transactions
+Assist customers with banking operations
 
-Assist with operational tasks
+🛡️ Administrator
 
-🔹 Admin
+Manage users, staff, and system roles
 
-Manage users and staff
+Oversee application operations
 
-Oversee system operations
+Access system logs and audit trails
 
-Access logs and system data
+⚙️ Core Features
 
-⚙️ Key Features
+Secure authentication and authorization mechanisms
 
-Secure authentication and authorization
+Role-based access control (RBAC)
 
-Role-based access control
+Session management and timeout handling
 
-Session management
+Encrypted password storage
 
-Password encryption
+Fund transfer processing
 
-Fund transfers between accounts
+Bill payment workflow
 
-Bill payment processing
+Transaction history and reporting
 
-Transaction history tracking
+Centralized logging for auditing and troubleshooting
 
-Logging for auditing and monitoring
-
-Responsive UI using JSP, JSTL, tables, and cards
+Responsive UI with structured layouts (tables, cards, forms)
 
 🗄️ Database Design
 
-The system uses a relational database (Oracle) with the following core entities:
+The application uses a relational Oracle database with well-defined entities:
 
-Customer
+Customer – Stores customer profile and login details
 
-Account
+Account – Manages account balances and types
 
-Transaction
+Transaction – Records all debit and credit operations
 
-BillPayment
+BillPayment – Tracks bill payment details
 
-BankStaff
+BankStaff – Maintains staff and administrative users
 
-JPA is used for object-relational mapping and persistence.
+JPA handles entity mapping, relationships, and data persistence efficiently.
 
-🛠️ Technologies Used
+🔐 Security Implementation
 
-Backend: Java, Servlets, EJB, JPA
+Authentication using secure credentials
 
-Frontend: JSP, JSTL, HTML, CSS
+Authorization via role-based access
 
-Database: Oracle
+Password encryption for data protection
 
-Server: Apache Tomcat / Application Server
+Session validation to prevent unauthorized access
 
-Security: Session management, encryption, role-based authorization
+Logging for traceability and auditing
+
+🛠️ Technologies & Tools
+🔧 Backend
+
+Java
+
+Servlets
+
+Enterprise JavaBeans (EJB)
+
+Java Persistence API (JPA)
+
+🎨 Frontend
+
+JSP
+
+JSTL
+
+HTML
+
+CSS
+
+🗄️ Database
+
+Oracle RDBMS
+
+🚀 Server & Deployment
+
+Apache Tomcat / Java EE Application Server
