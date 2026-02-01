@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.2"
+	xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd">
+	<persistence-unit name="OnlineBankingSystemJPA">
+		<jta-data-source>java:jboss/datasources/OracleDS</jta-data-source>
+		<class>com.entities.Customer</class>
+		<class>com.entities.Account</class>
+		<class>com.entities.Transaction</class>
+		<class>com.entities.BillPayment</class>
+		<class>com.entities.BankStaff</class>
+		<class>com.entities.UserType</class>
+		<class>com.entities.Admin</class>
+	</persistence-unit>
+</persistence>
